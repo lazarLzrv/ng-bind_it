@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-game-control 
+            (counterEmiterOdd)="passEmiterOdd($event)" 
+            (counterEmiterEven)="passEmiterEven($event)">
+        </app-game-control>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <app-odd 
+                        *ngFor="let singleCounter of passedCounterEven"
+                        [counter]="singleCounter" ></app-odd>
+                </div>
+                <div class="col-md-6">
+                    <app-even
+                    *ngFor="let singleCounter of passedCounterOdd"
+                    [counter]="singleCounter" ></app-even>
+                </div>
+            </div>  
+        </div> 
+    </div> 
+</div>
+            
+
